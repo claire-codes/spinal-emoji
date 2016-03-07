@@ -15,16 +15,12 @@ window.MyView = Backbone.View.extend( {
     render: function () {
       var that = this;
       $.get('template.html', function(template) {
-        this.template = Mustache.render(template, {name: that.model.get('name')});
+        this.template = Mustache.render(template, {name: that.model.get('emoji')});
         that.$el.html(this.template);
       });
       return this;
     },
     toggle: function() {
-      if (this.model.get('name') === 'Eric') {
-        this.model.set('name', 'Alice');
-      } else {
-        this.model.set('name', 'Eric');
-      }
+      this.model.getEmoji();
     }
 });

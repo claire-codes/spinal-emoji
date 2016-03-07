@@ -1,5 +1,12 @@
 window.MyModel = Backbone.Model.extend({
   defaults: {
-    name: 'Eric'
+    emoji: 'default'
+  },
+
+  getEmoji: function() {
+    var self = this;
+    $.get("/emoji", function(data) {
+      self.set('emoji', data);
+    })
   }
 });
