@@ -19,8 +19,25 @@
         <script src="js/model.js"></script>
         <script src="js/view.js"></script>
         <script src="js/index.js"></script>
+        <script src="//twemoji.maxcdn.com/twemoji.min.js"></script> 
+
     </head>
     <body>
+        <h2>Boom &#x1F3B9; and &#x1F3C1; &amp; &#x1F600; </h2>
+        <span class="emoji">😀</span>
         <div id="myView"></div>
+        <script>
+        window.onload = function() {
+
+          // Set the size of the rendered Emojis
+          // This can be set to 16x16, 36x36, or 72x72
+          twemoji.size = '16x16';
+
+          // Parse the document body and
+          // insert <img> tags in place of Unicode Emojis
+          twemoji.parse(document.body);
+
+        }
+        </script>
     </body>
 </html>
