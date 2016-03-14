@@ -4,7 +4,7 @@
   "description": "Backbone App to display a random emoji",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec",
+    "test": "mocha-phantomjs test/testRunner.html",
     "start": "node app.js",
     "browsersync": "browser-sync start --server --files 'css/*'"
   },
@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "mocha-phantomjs": "^4.0.2"
   }
 }
