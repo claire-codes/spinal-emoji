@@ -1,6 +1,6 @@
 window.MyModel = Backbone.Model.extend({
   defaults: {
-    emoji: 'default'
+    emoji: ''
   },
 
   getEmoji: function() {
