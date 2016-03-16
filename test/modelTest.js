@@ -4,7 +4,7 @@ describe("model", function() {
   var model;
 
   beforeEach(function() {
-    model = new MyModel();
+    model = new app.MyModel();
   });
 
   it("should be a Backbone Model", function() {
@@ -20,7 +20,7 @@ describe("model", function() {
     sinon.stub($, 'get', function() {
       return "foo";
     });
-    var testModel = new MyModel();
+    var testModel = new app.MyModel();
     testModel.getEmoji();
     expect(testModel.get("emoji")).to.eq("foo");
     $.get.restore();

@@ -1,3 +1,7 @@
+var app = app || {};
+
 $(function () {
-    window.myView = new MyView();
+    "use strict";
+
+    new app.MyView();
 });

@@ -1,4 +1,9 @@
-window.MyView = Backbone.View.extend( {
+var app = app || {};
+
+(function($) {
+  "use strict";
+
+  app.MyView = Backbone.View.extend( {
     el: '#myView',
 
     events: {
@@ -6,7 +11,7 @@ window.MyView = Backbone.View.extend( {
     },
 
     initialize: function () {
-      this.model = new MyModel();
+      this.model = new app.MyModel();
       this.model.on('change', this.render, this);
       this.render();
     },
@@ -23,4 +28,5 @@ window.MyView = Backbone.View.extend( {
     randomise: function() {
       this.model.getEmoji();
     }
-});
+  });
+})(jQuery);

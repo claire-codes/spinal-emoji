@@ -1,12 +1,18 @@
-window.MyModel = Backbone.Model.extend({
-  defaults: {
-    emoji: ''
-  },
+var app = app || {};
 
-  getEmoji: function() {
-    var self = this;
-    $.get("/emoji", function(data) {
-      self.set('emoji', data);
-    })
-  }
-});
+(function() {
+  "use strict";
+
+  app.MyModel = Backbone.Model.extend({
+    defaults: {
+      emoji: ''
+    },
+
+    getEmoji: function() {
+      var self = this;
+      $.get("/emoji", function(data) {
+        self.set('emoji', data);
+      })
+    }
+  });
+})();
