@@ -12,7 +12,7 @@ var app = app || {};
       var self = this;
       $.get("/emoji", function(data) {
         self.set('emoji', data);
-      })
+      });
     }
   });
 })();

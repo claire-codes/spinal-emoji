@@ -10,7 +10,12 @@
     <!-- Testing libraries -->
     <script src="../node_modules/mocha/mocha.js"></script>
     <script src="../node_modules/chai/chai.js"></script>
-    <script src="../lib/sinon.js"></script>
+    <script src="lib/sinon.js"></script>
+
+    <script type="text/mustache" id="view-template">
+        <h1>Howdy ho {{ name }}</h1>
+        <button type="button" class="btn">New emoji!</button>
+    </script>
 
     <script>
       mocha.setup('bdd')
@@ -22,6 +27,7 @@
     <script src="../node_modules/underscore/underscore.js"></script>
     <script src="../node_modules/backbone/backbone.js"></script>
     <script src="../node_modules/mustache/mustache.js"></script>
+    <script src="../node_modules/handlebars/dist/handlebars.js"></script>
 
     <!-- Source files -->
     <script src="../js/model.js"></script>
