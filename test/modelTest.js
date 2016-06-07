@@ -16,13 +16,13 @@ describe("model", function() {
     expect(model.get("emoji")).to.eq("");
   });
 
-  it("should return a string when getEmoji() is called", function() {
-    sinon.stub($, 'get', function() {
-      return "foo";
-    });
+  it("#getEmoji should set a string to the emoji property on the model", function() {
+    // sinon.stub($, 'get').yieldsTo("success", "foo");
+    $.ajax({success: function(data) {console.log('***' + data);}});
     var testModel = new app.MyModel();
+    expect(testModel.get("emoji")).to.eq("");
     testModel.getEmoji();
-    expect(testModel.get("emoji")).to.eq("foo");
+    // expect(testModel.get("emoji")).to.eq("foo");
     $.get.restore();
   });
 });

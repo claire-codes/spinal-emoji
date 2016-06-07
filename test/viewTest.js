@@ -15,7 +15,7 @@ describe("view", function() {
   });
 
   it("should have an el", function() {
-    expect(view.el.id).to.equal('#myView');
+    expect(view.el.id).to.equal('myView');
   });
 
   it("should have default div tagname", function() {
@@ -37,11 +37,11 @@ describe("view", function() {
     expect(rando.calledOnce).not.to.be.ok;
     var testView = new app.MyView();
     expect(mySpy.calledOnce).not.to.be.ok;
+    expect(rando.calledOnce).to.be.ok;
     testView.render();
     testView.$el.find('.btn').trigger('click');
-    // expect(mySpy.calledOnce).to.be.ok;
-    expect(rando.calledOnce).to.be.ok;
-    MyView.prototype.randomise.restore();
-    MyView.prototype.render.restore();
+    expect(mySpy.calledOnce).to.be.ok;
+    app.MyView.prototype.randomise.restore();
+    app.MyView.prototype.render.restore();
   });
 });
